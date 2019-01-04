@@ -2,7 +2,7 @@
   <li class="{% if page.url == "/" %} active {% endif %}"><a href="{{ "/" | absolute_url }}">Home</a></li>
   <li class="{% if page.url contains '/about/' %} active {% endif %}"><a href="{{ "/about/" | absolute_url }}">About Me</a></li>
   <li class="{% if page.url contains '/portfolio/' %} active {% endif %}"><a href="{{ "/portfolio/" | absolute_url }}">Portfolio</a></li>
-  <li><a href="{{ "/assets/Resume.pdf" | absolute_url }}" target="_blank">Résumé</a></li>
+  <li class=""><a href="{{ "/static/pdf/Resume.pdf" | absolute_url }}">Résumé</a></li>
 </ul>
 
 <ul class="icons">
