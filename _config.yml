@@ -38,17 +38,15 @@ disqus_shortname:   default
 
 # Social
 analytics-id:       "default"
-twitter:            default
-facebook:           default
-instagram:          default
-github:             default
+linkedin:           mitchell-falkow
+github:             mdfalkow
 
 # personal
 location:           Ramsey, NJ
 phone:              201-921-4874
 email:              mdfalkow@gmail.com
 
-# Gems
+# Plugins
 plugins:
   - jekyll-mentions
   - jekyll-sitemap
