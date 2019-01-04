@@ -14,9 +14,9 @@ defaults:
     path: ''
     type: posts
   values:
-    permalink: "/blog/:title/"
+    permalink: "/portfolio/:title/"
     layout: post
-    author:
+    author: Mitchell Falkow
 
 # Jekyll
 permalink:          /blog/:title/
@@ -55,7 +55,7 @@ plugins:
   - jekyll-paginate
 
 paginate: 6
-paginate_path: "/blog/page:num/"
+paginate_path: "/portfolio/page:num/"
 
 jekyll-mentions:
     base_url: https://github.com
