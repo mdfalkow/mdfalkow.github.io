@@ -14,7 +14,7 @@ My name is Mitchell Falkow, and I am a junior at Rensselaer Polytechnic Institut
 
 I am a member of the [Rensselaer Center for Open Source](https://rcos.io), where I help develop and contribute to open source projects in addition to mentoring other students. I am also a volunteer instructor for [coding&&community](https://codingandcommunity.org/).
 
-One of my biggest hobbies is studying karate. I have been practicing the Shorin-ryu Shidokan style of karate since 2009. I am currently a 2nd degree black belt and I am eligible to test for my 3rd degree in May 2019. As a black belt, I have led classes for children, teens, and adults for over 6 years now -- less frequently now that I am in college, but I still lead classes whenever I am home. 
+One of my biggest hobbies is studying karate. I have been practicing the Shorin-ryu Shidokan style of karate since 2008. I am currently a 2nd degree black belt and I am eligible to test for my 3rd degree in May 2019. As a black belt, I have led classes for children, teens, and adults for over 6 years now -- less frequently now that I am in college, but I still lead classes whenever I am home. 
 
 In my free time I also enjoy playing video games. Series like *The Legend of Zelda*, *Kirby* and *Super Smash Bros.* are some of my favorites, but I also enjoy games like *Borderlands 2*, *Sid Meier's Civilization* and *Binding of Isaac*. These are just a few games and series which I really enjoy -- the list would be very long if I tried to include all of them.
 
