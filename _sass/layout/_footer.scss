@@ -22,7 +22,7 @@
 			@include vendor('flex-basis', '50%');
 			@include vendor('flex-grow', '1');
 			@include vendor('flex-shrink', '1');
-			@include padding((_size(padding) * 2), (_size(padding) * 2));
+			@include padding((_size(padding) * 1.25), (_size(padding) * 1.25));
 			border-left: solid 2px _palette(alt, border);
 
 			&:first-child {
