@@ -38,28 +38,13 @@
 						<h3>Welcome to my</h3>
 						<h1>Programming Portfolio</h1>
 						<p class="center">
-						Here you will find examples of my personal projects and contributions to projects through organizations such as <a href="https://rcos.io/">Rensselaer
+						Here you will find examples of my personal and school projects, as well as contributions to projects through organizations such as <a href="https://rcos.io/">Rensselaer
 							Center for Open Source</a>.
 					</p>
 				</header>
 			</article>
 			<!-- Post -->
-			<section class="posts">
-				{% for post in site.posts limit:4 %}
-				<article>
-					<header>
-						<span class="date">{{ post.date | date_to_string }}</span>
-						<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-					</header>
-					<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-					<p>{{ post.excerpt }}</p>
-					<ul class="actions">
-						<li><a href="{{ post.url | absolute_url }}" class="button">Read post</a></li>
-					</ul>
-				</article>
-				{% endfor %}
-
-			</section>
+			{% include posts.html %}
 
 		</div>
 

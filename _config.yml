@@ -9,6 +9,8 @@ background_image:   /images/bg.jpg
 # Tip: The color palette and other styles can be configured in /_sass/lib/_vars.scss
 formspree_thankyou_page: /thank-you
 
+posts: '_posts'
+
 defaults:
 - scope:
     path: ''
@@ -19,7 +21,7 @@ defaults:
     author: Mitchell Falkow
 
 # Jekyll
-permalink:          /blog/:title/
+permalink:          /portfolio/:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:

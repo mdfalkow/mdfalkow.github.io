@@ -65,36 +65,20 @@ changefreq: weekly
 					My goal is to be able to share the my projects and contributions, whether they be independent
 					or in affiliation with <a href="https://rcos.io">Rensselaer Center for Open Source</a>.</p>
 
-				<p>Thank you for your time, and I hope you enjoy my work.</p>
-				
-				<p>If you have any questions or would like to reach out to me, feel free to send me an email at <a href="mailto:mdfalkow@gmail.com">mdfalkow@gmail.com</a>.</p>
+				<p> If you have any questions or would like to reach out to me, feel free to send me an email at <a href="mailto:mdfalkow@gmail.com">mdfalkow@gmail.com</a>.
+					Thank you for your time, and I hope you enjoy my work.</p>
 
 			</article>
 
 			<!-- Posts -->
-			<section class="posts">
-				{% for post in site.posts limit:4 %}
-				<article>
-					<header>
-						<span class="date">{{ post.date | date_to_string }}</span>
-						<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-					</header>
-					<a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a>
-					<p>{{ post.excerpt }}</p>
-					<ul class="actions">
-						<li><a href="{{ post.url | absolute_url }}" class="button">Read post</a></li>
-					</ul>
-				</article>
-				{% endfor %}
+			{% include posts.html%}
 
-			</section>
-
-			<!-- Footer -->
+			<!-- Footer
 			<footer>
 				<ul class="actions">
 					<li><a href="{{ "/blog/" | absolute_url }}" class="button">My Blog</a></li>
 				</ul>
-			</footer>
+			</footer> -->
 
 		</div>
 
