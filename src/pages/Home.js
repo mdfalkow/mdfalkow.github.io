@@ -18,30 +18,14 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const baseContainerProps = {
-  alignItems: 'center',
-  justify: 'center'
-}
-
 const Title = ({ className }) => (
-  <Grid container item {...baseContainerProps}>
+  <Grid container item alignItems={'center'} justify={'center'}>
     <Grid item xs={10}>
       <Typography variant={'h1'}>Mitchell Falkow</Typography>
       <Typography variant={'h3'}>Full-Stack Developer</Typography>
       <Typography variant={'h3'}>Machine Learning Enthusiast</Typography>
     </Grid>
   </Grid>
-  // <Grid container item xs={12} md={6} {...baseContainerProps} className={className}>
-  // <Grid container item xs={11}>
-  // <Grid item xs={12}>
-  // <Typography variant={'h1'}>Mitchell Falkow</Typography>
-  // </Grid>
-  // <Grid item xs={12}>
-  // <Typography variant={'h3'}>Full-Stack Developer</Typography>
-  // <Typography variant={'h3'}>Machine Learning Enthusiast</Typography>
-  // </Grid>
-  // </Grid>
-  // </Grid>
 )
 
 const Content = ({ className }) => {
@@ -49,7 +33,7 @@ const Content = ({ className }) => {
   const sections = ['About', 'Projects', 'Blog', 'Resume', 'Contact']
 
   return (
-    <Grid container item {...baseContainerProps}>
+    <Grid container item alignItems={'center'} justify={'center'}>
       <Grid item xs={10}>
         <Paper component={List}>
           {sections.map(section =>
@@ -75,7 +59,6 @@ export default () => {
         <Grid container item xs={12} md={6}>
           <Title/>
         </Grid>
-        {/*<Grid item xs={false} md={6}/>*/}
         <Grid container item xs={12} md={6}>
           <Content/>
         </Grid>
