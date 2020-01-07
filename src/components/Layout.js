@@ -1,15 +1,31 @@
 import React from 'react'
-import { Box, CssBaseline, Grid, makeStyles, MuiThemeProvider, Typography } from '@material-ui/core'
+import {
+  CssBaseline,
+  Grid,
+  Paper,
+  makeStyles,
+  MuiThemeProvider,
+  Typography
+} from '@material-ui/core'
 import theme from '../styles/theme'
 import { Helmet } from 'react-helmet/es/Helmet'
 
 const useStyles = makeStyles({
   root: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0
+    [theme.breakpoints.down('sm')]: {},
+    [theme.breakpoints.up('md')]: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0
+    }
+  },
+  title: {
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: 10,
+      paddingBottom: 10
+    }
   }
 })
 
@@ -18,13 +34,33 @@ export default ({ children }) => {
   return (
     <div>
       <Helmet>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        />
       </Helmet>
-      {/*<CssBaseline/>*/}
+      <CssBaseline />
       <MuiThemeProvider theme={theme}>
-        <Box className={classes.root}>
-          {children}
-        </Box>
+        <Grid container className={classes.root}>
+          <Grid container item xs={12} md={6} className={classes.title}>
+            <Grid container item alignItems={'center'} justify={'center'}>
+              <Grid item xs={10}>
+                <Typography variant={'h1'}>Mitchell Falkow</Typography>
+                <Typography variant={'h3'}>Full-Stack Developer</Typography>
+                <Typography variant={'h3'}>
+                  Machine Learning Enthusiast
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid container item xs={12} md={6}>
+            <Grid container item alignItems={'center'} justify={'center'}>
+              <Grid item xs={10}>
+                <Paper style={{padding: 16}}>{children}</Paper>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
       </MuiThemeProvider>
     </div>
   )
