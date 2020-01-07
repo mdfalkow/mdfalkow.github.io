@@ -1,11 +1,11 @@
 import React, { useMemo, forwardRef } from 'react'
 // import PropTypes from 'prop-types'
-import { Link as GatsbyLink } from 'gatsby'
+import { Link } from 'gatsby'
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
 
 export default ({ icon, primary, primaryProps, to }) => {
   const renderLink = useMemo(
-    () => forwardRef((itemProps, ref) => <GatsbyLink to={to} ref={ref} {...itemProps} />),
+    () => forwardRef((itemProps, ref) => <Link to={to} ref={ref} {...itemProps} />),
     [to]
   )
 

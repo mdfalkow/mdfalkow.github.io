@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { Grid, Paper, Typography, Divider } from '@material-ui/core'
+import { Typography, Divider } from '@material-ui/core'
 
-const Content = () => (
-  <>
+export default () => (
+  <Layout>
     <Typography variant={'h4'}>About me</Typography>
     <Divider style={{ margin: 10 }} />
     <Typography variant={'body1'}>
@@ -15,11 +15,5 @@ const Content = () => (
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     </Typography>
-  </>
-)
-
-export default () => (
-  <Layout>
-    <Content />
   </Layout>
 )

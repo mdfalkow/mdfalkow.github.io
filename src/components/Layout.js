@@ -2,7 +2,7 @@ import React from 'react'
 import {
   CssBaseline,
   Grid,
-  Paper,
+  Box,
   makeStyles,
   MuiThemeProvider,
   Typography
@@ -29,7 +29,12 @@ const useStyles = makeStyles({
   }
 })
 
-export default ({ children }) => {
+export default ({
+  children,
+  alignItems = 'center',
+  justify = 'center',
+  ...layoutProps
+}) => {
   const classes = useStyles()
   return (
     <div>
@@ -43,7 +48,7 @@ export default ({ children }) => {
       <MuiThemeProvider theme={theme}>
         <Grid container className={classes.root}>
           <Grid container item xs={12} md={6} className={classes.title}>
-            <Grid container item alignItems={'center'} justify={'center'}>
+            <Grid container alignItems={'center'} justify={'center'}>
               <Grid item xs={10}>
                 <Typography variant={'h1'}>Mitchell Falkow</Typography>
                 <Typography variant={'h3'}>Full-Stack Developer</Typography>
@@ -54,9 +59,14 @@ export default ({ children }) => {
             </Grid>
           </Grid>
           <Grid container item xs={12} md={6}>
-            <Grid container item alignItems={'center'} justify={'center'}>
-              <Grid item xs={10}>
-                <Paper style={{padding: 16}}>{children}</Paper>
+            <Grid
+              container
+              justify={justify}
+              alignItems={alignItems}
+              {...layoutProps}
+            >
+              <Grid item xs={10} style={{ padding: 16 }}>
+                {children}
               </Grid>
             </Grid>
           </Grid>
