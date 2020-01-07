@@ -1,26 +1,27 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import ListItemLink from '../components/ListItemLink'
-import { Grid, Paper, List } from '@material-ui/core'
+import { List, ListItemIcon, ListItemText } from '@material-ui/core'
 
 const Content = () => {
   const sections = [
     { title: 'About me', path: 'about' },
     { title: 'Projects', path: 'projects' },
-    { title: 'Blog', path: 'blog' },
-    { title: 'Resume', path: 'resume' },
-    { title: 'Contact', path: 'contact' }
+    { title: 'Blog', path: '#' },
+    { title: 'Resume', path: '#' },
+    { title: 'Contact', path: '#' }
   ]
 
   return (
     <List>
-      {sections.map(({ title, path }) => (
-        <ListItemLink
-          to={`/${path}`}
-          icon={null}
-          primary={title}
-          primaryProps={{ primaryTypographyProps: { variant: 'h4' } }}
-        />
+      {sections.map(({ title, icon, path }) => (
+        <ListItemLink to={`/${path}`}>
+          {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+          <ListItemText
+            primary={title}
+            primaryTypographyProps={{ variant: 'h4' }}
+          />
+        </ListItemLink>
       ))}
     </List>
   )
