@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import ListItemLink from '../components/ListItemLink'
 import { List, ListItemIcon, ListItemText } from '@material-ui/core'
 
-const Content = () => {
+export default () => {
   const sections = [
     { title: 'About me', path: 'about' },
     { title: 'Projects', path: 'projects' },
@@ -13,22 +13,18 @@ const Content = () => {
   ]
 
   return (
-    <List>
-      {sections.map(({ title, icon, path }) => (
-        <ListItemLink to={`/${path}`}>
-          {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
-          <ListItemText
-            primary={title}
-            primaryTypographyProps={{ variant: 'h4' }}
-          />
-        </ListItemLink>
-      ))}
-    </List>
+    <Layout>
+      <List>
+        {sections.map(({ title, icon, path }) => (
+          <ListItemLink to={`/${path}`}>
+            {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+            <ListItemText
+              primary={title}
+              primaryTypographyProps={{ variant: 'h4' }}
+            />
+          </ListItemLink>
+        ))}
+      </List>
+    </Layout>
   )
 }
-
-export default () => (
-  <Layout>
-    <Content />
-  </Layout>
-)

@@ -6,7 +6,15 @@
 
 module.exports = {
   plugins: [
-      `gatsby-plugin-material-ui`,
-      `gatsby-plugin-react-helmet`
+    `gatsby-plugin-material-ui`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/projects`
+      }
+    },
+    `gatsby-transformer-remark`
   ]
 }
