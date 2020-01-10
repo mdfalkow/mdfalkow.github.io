@@ -2,7 +2,6 @@ import React from 'react'
 import {
   CssBaseline,
   Grid,
-  Box,
   makeStyles,
   MuiThemeProvider,
   Typography

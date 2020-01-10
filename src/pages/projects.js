@@ -12,10 +12,10 @@ import CardActionLink from '../components/CardActionLink'
 
 // TODO: query from src/pages/projects/ and paginate
 
-const ProjectTile = ({ name, image, url }) => (
+const ProjectTile = ({ name, thumbnail, url }) => (
   <Card>
     <CardActionLink to={url}>
-      {!!image && <CardMedia component={'img'} image={image} />}
+      {!!thumbnail && <CardMedia component={'img'} image={thumbnail} />}
       <CardContent>
         <Typography variant={'h5'}>{name}</Typography>
       </CardContent>
@@ -26,7 +26,7 @@ const ProjectTile = ({ name, image, url }) => (
 export default () => {
   const projects = [...'ABCDEFGH'.split('')].map(x => ({
     name: x,
-    image: 'https://picsum.photos/200',
+    thumbnail: 'https://picsum.photos/200',
     url: '/'
   }))
 
