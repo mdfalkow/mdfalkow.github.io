@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import { Card, Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import ProjectTile from '../components/ProjectTile'
 import ProjectPagination from '../components/ProjectPagination'
 
@@ -15,7 +15,7 @@ export default function ProjectListTemplate({ data, pageContext }) {
           <Grid item xs={12} sm={6} md={4}>
             <ProjectTile
               title={node.frontmatter.title}
-              thumbnail={null}
+              thumbnail={node.frontmatter.thumbnail}
               url={node.fields.slug}
             />
           </Grid>
@@ -47,6 +47,7 @@ export const blogListQuery = graphql`
           }
           frontmatter {
             date(formatString: "YYYY-MM-DD")
+            thumbnail
             title
           }
         }
