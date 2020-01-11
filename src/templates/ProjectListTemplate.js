@@ -10,19 +10,16 @@ export default function ProjectListTemplate({ data, pageContext }) {
 
   return (
     <Layout>
-      <Grid container spacing={2} style={{ height: '100%' }}>
-        {posts.map(({ node }) => {
-          const { title } = node.frontmatter
-          return (
-            <Grid item xs={12} md={4}>
-              <ProjectTile
-                title={title}
-                thumbnail={null}
-                url={node.fields.slug}
-              />
-            </Grid>
-          )
-        })}
+      <Grid container spacing={2}>
+        {posts.map(({ node }) => (
+          <Grid item xs={12} md={4}>
+            <ProjectTile
+              title={node.frontmatter.title}
+              thumbnail={null}
+              url={node.fields.slug}
+            />
+          </Grid>
+        ))}
         {Array(Math.max(0, 6 - posts.length))
           .fill(0)
           .map(() => (
