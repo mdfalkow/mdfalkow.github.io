@@ -24,7 +24,7 @@ export default function ProjectListTemplate({ data, pageContext }) {
           .fill(0)
           .map(() => (
             <Grid item md={4}>
-              <Card style={{ height: '100%' }} />
+              <ProjectTile style={{ visibility: 'hidden' }} />
             </Grid>
           ))}
       </Grid>

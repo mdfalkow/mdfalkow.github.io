@@ -8,8 +8,8 @@ import {
 import { Skeleton } from '@material-ui/lab'
 import { Link } from 'gatsby'
 
-const ProjectTile = ({ title, thumbnail, url }) => (
-  <Card>
+const ProjectTile = ({ title, thumbnail, url, ...props}) => (
+  <Card {...props}>
     <CardActionArea component={Link} to={url}>
       {!thumbnail ? (
         <Skeleton animation={false} variant={'rect'} height={200} />
