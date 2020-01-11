@@ -2,22 +2,21 @@ import React from 'react'
 import {
   Card,
   CardMedia,
-  CardContent,
-  Typography,
-  CardActionArea
+  CardActionArea,
+  CardHeader
 } from '@material-ui/core'
+import { Skeleton } from '@material-ui/lab'
 import { Link } from 'gatsby'
 
 const ProjectTile = ({ title, thumbnail, url }) => (
   <Card>
     <CardActionArea component={Link} to={url}>
-      <CardMedia
-        component={'img'}
-        src={!thumbnail ? 'https://use.placeimage.app/200x200' : thumbnail}
-      />
-      <CardContent>
-        <Typography variant={'h5'}>{title}</Typography>
-      </CardContent>
+      {!thumbnail ? (
+        <Skeleton animation={false} variant={'rect'} height={200} />
+      ) : (
+        <CardMedia component={'img'} src={!thumbnail ? '' : thumbnail} />
+      )}
+      <CardHeader title={title} />
     </CardActionArea>
   </Card>
 )

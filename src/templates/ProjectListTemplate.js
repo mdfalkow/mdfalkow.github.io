@@ -12,7 +12,7 @@ export default function ProjectListTemplate({ data, pageContext }) {
     <Layout>
       <Grid container spacing={2}>
         {posts.map(({ node }) => (
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <ProjectTile
               title={node.frontmatter.title}
               thumbnail={null}
