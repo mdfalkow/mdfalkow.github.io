@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import ListItemLink from '../components/ListItemLink'
-import { List, ListItemIcon, ListItemText } from '@material-ui/core'
+import { List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
+import { Link } from 'gatsby'
 
 export default () => {
   const sections = [
@@ -16,13 +16,13 @@ export default () => {
     <Layout>
       <List>
         {sections.map(({ title, icon, path }) => (
-          <ListItemLink to={`/${path}`}>
+          <ListItem button component={Link} to={`/${path}`}>
             {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
             <ListItemText
               primary={title}
               primaryTypographyProps={{ variant: 'h4' }}
             />
-          </ListItemLink>
+          </ListItem>
         ))}
       </List>
     </Layout>

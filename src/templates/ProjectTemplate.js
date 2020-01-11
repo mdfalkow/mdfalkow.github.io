@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 
-export default ({ data }) => {
+export default function ProjectTemplate({ data }) {
   const { ...post } = data.markdownRemark
   return (
     <Layout>

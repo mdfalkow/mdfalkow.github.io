@@ -64,7 +64,7 @@ export default ({
               alignItems={alignItems}
               {...layoutProps}
             >
-              <Grid item xs={10} style={{ padding: 16 }}>
+              <Grid item xs={10} style={{ padding: 16 }} >
                 {children}
               </Grid>
             </Grid>
