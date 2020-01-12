@@ -33,12 +33,12 @@ const useStyles = makeStyles({
   }
 })
 
-export default ({
+export default function Layout({
   children,
   alignItems = 'center',
   justify = 'center',
   ...layoutProps
-}) => {
+}) {
   const classes = useStyles()
   return (
     <div>
@@ -53,7 +53,13 @@ export default ({
         <Grid container className={classes.root}>
           <Grid container item xs={12} md={6} className={classes.title}>
             <Grid container alignItems={'center'} justify={'center'}>
-              <Grid item xs={10} component={Link} to={'/'} className={classes.titleText}>
+              <Grid
+                item
+                xs={10}
+                component={Link}
+                to={'/'}
+                className={classes.titleText}
+              >
                 <Typography variant={'h1'}>Mitchell Falkow</Typography>
                 <Typography variant={'h3'}>Full-Stack Developer</Typography>
                 <Typography variant={'h3'}>

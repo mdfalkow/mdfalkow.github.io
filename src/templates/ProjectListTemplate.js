@@ -1,15 +1,33 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import { Grid } from '@material-ui/core'
+import {
+  Grid,
+  Typography,
+  Divider,
+  useTheme,
+  makeStyles
+} from '@material-ui/core'
 import ProjectTile from '../components/ProjectTile'
 import ProjectPagination from '../components/ProjectPagination'
+import TopLevelNavigation from '../components/TopLevelNavigation'
 
-export default function ProjectListTemplate({ data, pageContext }) {
+const useStyles = makeStyles(theme => ({
+  divider: {
+    margin: theme.spacing(2)
+  }
+}))
+
+export default function ProjectListTemplate({ data, pageContext, path }) {
   const posts = data.allMarkdownRemark.edges
-
+  const theme = useTheme()
+  const classes = useStyles(theme)
+  // console.log(pageContext.currentPage)
+  let _path =
+    pageContext.currentPage !== 1 ? path.slice(0, path.lastIndexOf('/')) : path
   return (
     <Layout>
+      <TopLevelNavigation path={_path} />
       <Grid container spacing={2}>
         {posts.map(({ node }) => (
           <Grid item xs={12} sm={6} md={4}>
@@ -33,8 +51,8 @@ export default function ProjectListTemplate({ data, pageContext }) {
   )
 }
 
-export const blogListQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
+export const projectListQuery = graphql`
+  query ($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       limit: $limit
