@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core'
 import theme from '../styles/theme'
 import { Helmet } from 'react-helmet/es/Helmet'
+import { Link } from 'gatsby'
 
 const useStyles = makeStyles({
   root: {
@@ -25,6 +26,10 @@ const useStyles = makeStyles({
       paddingTop: 10,
       paddingBottom: 10
     }
+  },
+  titleText: {
+    color: theme.palette.text.primary,
+    textDecoration: 'none'
   }
 })
 
@@ -48,7 +53,7 @@ export default ({
         <Grid container className={classes.root}>
           <Grid container item xs={12} md={6} className={classes.title}>
             <Grid container alignItems={'center'} justify={'center'}>
-              <Grid item xs={10}>
+              <Grid item xs={10} component={Link} to={'/'} className={classes.titleText}>
                 <Typography variant={'h1'}>Mitchell Falkow</Typography>
                 <Typography variant={'h3'}>Full-Stack Developer</Typography>
                 <Typography variant={'h3'}>
@@ -64,7 +69,7 @@ export default ({
               alignItems={alignItems}
               {...layoutProps}
             >
-              <Grid item xs={10} style={{ padding: 16 }} >
+              <Grid item xs={10} style={{ padding: 16 }}>
                 {children}
               </Grid>
             </Grid>
