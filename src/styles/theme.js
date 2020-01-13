@@ -5,6 +5,9 @@ const theme = createMuiTheme({
   palette: {
     primary: red,
     secondary: blueGrey
+  },
+  typography: {
+    fontFamily: ['Roboto', 'Helvetica', 'sans-serif'].join(',')
   }
 })
 

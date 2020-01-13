@@ -5,12 +5,12 @@ import theme from '../styles/theme'
 
 export default ({ element }) => (
   <>
-    <Helmet>
+    {/* <Helmet>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
       />
-    </Helmet>
+    </Helmet> */}
     <CssBaseline />
     <ThemeProvider theme={theme}>{element}</ThemeProvider>
   </>

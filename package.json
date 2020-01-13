@@ -20,6 +20,7 @@
     "gatsby": "^2.18.12",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-react-helmet": "^3.1.18",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-transformer-remark": "^2.6.45",
     "react": "^16.12.0",
